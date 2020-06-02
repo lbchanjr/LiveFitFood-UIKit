@@ -13,6 +13,17 @@
 		879C397E2484B73300A4E86C /* LiveFitFood.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 879C397C2484B73300A4E86C /* LiveFitFood.xcdatamodeld */; };
 		879C39802484B73500A4E86C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 879C397F2484B73500A4E86C /* Assets.xcassets */; };
 		879C39832484B73500A4E86C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 879C39812484B73500A4E86C /* LaunchScreen.storyboard */; };
+		879C39C22485E89E00A4E86C /* Mealkit+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C39B82485E89E00A4E86C /* Mealkit+CoreDataClass.swift */; };
+		879C39C32485E89E00A4E86C /* Mealkit+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C39B92485E89E00A4E86C /* Mealkit+CoreDataProperties.swift */; };
+		879C39C42485E89E00A4E86C /* Coupon+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C39BA2485E89E00A4E86C /* Coupon+CoreDataClass.swift */; };
+		879C39C52485E89E00A4E86C /* Coupon+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C39BB2485E89E00A4E86C /* Coupon+CoreDataProperties.swift */; };
+		879C39C62485E89E00A4E86C /* Order+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C39BC2485E89E00A4E86C /* Order+CoreDataClass.swift */; };
+		879C39C72485E89E00A4E86C /* Order+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C39BD2485E89E00A4E86C /* Order+CoreDataProperties.swift */; };
+		879C39C82485E89E00A4E86C /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C39BE2485E89E00A4E86C /* User+CoreDataClass.swift */; };
+		879C39C92485E89E00A4E86C /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C39BF2485E89E00A4E86C /* User+CoreDataProperties.swift */; };
+		879C39CA2485E89E00A4E86C /* Meal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C39C02485E89E00A4E86C /* Meal+CoreDataClass.swift */; };
+		879C39CB2485E89E00A4E86C /* Meal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C39C12485E89E00A4E86C /* Meal+CoreDataProperties.swift */; };
+		879C39CD2486295A00A4E86C /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C39CC2486295A00A4E86C /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +35,17 @@
 		879C397F2484B73500A4E86C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		879C39822484B73500A4E86C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		879C39842484B73500A4E86C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		879C39B82485E89E00A4E86C /* Mealkit+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mealkit+CoreDataClass.swift"; sourceTree = "<group>"; };
+		879C39B92485E89E00A4E86C /* Mealkit+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Mealkit+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		879C39BA2485E89E00A4E86C /* Coupon+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coupon+CoreDataClass.swift"; sourceTree = "<group>"; };
+		879C39BB2485E89E00A4E86C /* Coupon+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coupon+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		879C39BC2485E89E00A4E86C /* Order+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Order+CoreDataClass.swift"; sourceTree = "<group>"; };
+		879C39BD2485E89E00A4E86C /* Order+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Order+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		879C39BE2485E89E00A4E86C /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		879C39BF2485E89E00A4E86C /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		879C39C02485E89E00A4E86C /* Meal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+CoreDataClass.swift"; sourceTree = "<group>"; };
+		879C39C12485E89E00A4E86C /* Meal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		879C39CC2486295A00A4E86C /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +62,16 @@
 		879C39692484B73300A4E86C = {
 			isa = PBXGroup;
 			children = (
+				879C39B82485E89E00A4E86C /* Mealkit+CoreDataClass.swift */,
+				879C39B92485E89E00A4E86C /* Mealkit+CoreDataProperties.swift */,
+				879C39BA2485E89E00A4E86C /* Coupon+CoreDataClass.swift */,
+				879C39BB2485E89E00A4E86C /* Coupon+CoreDataProperties.swift */,
+				879C39BC2485E89E00A4E86C /* Order+CoreDataClass.swift */,
+				879C39BD2485E89E00A4E86C /* Order+CoreDataProperties.swift */,
+				879C39BE2485E89E00A4E86C /* User+CoreDataClass.swift */,
+				879C39BF2485E89E00A4E86C /* User+CoreDataProperties.swift */,
+				879C39C02485E89E00A4E86C /* Meal+CoreDataClass.swift */,
+				879C39C12485E89E00A4E86C /* Meal+CoreDataProperties.swift */,
 				879C39742484B73300A4E86C /* LiveFitFood */,
 				879C39732484B73300A4E86C /* Products */,
 			);
@@ -63,6 +95,7 @@
 				879C39812484B73500A4E86C /* LaunchScreen.storyboard */,
 				879C39842484B73500A4E86C /* Info.plist */,
 				879C397C2484B73300A4E86C /* LiveFitFood.xcdatamodeld */,
+				879C39CC2486295A00A4E86C /* WelcomeViewController.swift */,
 			);
 			path = LiveFitFood;
 			sourceTree = "<group>";
@@ -138,9 +171,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				879C39C72485E89E00A4E86C /* Order+CoreDataProperties.swift in Sources */,
+				879C39C32485E89E00A4E86C /* Mealkit+CoreDataProperties.swift in Sources */,
 				879C397E2484B73300A4E86C /* LiveFitFood.xcdatamodeld in Sources */,
+				879C39C22485E89E00A4E86C /* Mealkit+CoreDataClass.swift in Sources */,
+				879C39C82485E89E00A4E86C /* User+CoreDataClass.swift in Sources */,
+				879C39C52485E89E00A4E86C /* Coupon+CoreDataProperties.swift in Sources */,
+				879C39CB2485E89E00A4E86C /* Meal+CoreDataProperties.swift in Sources */,
+				879C39CA2485E89E00A4E86C /* Meal+CoreDataClass.swift in Sources */,
+				879C39C62485E89E00A4E86C /* Order+CoreDataClass.swift in Sources */,
+				879C39C92485E89E00A4E86C /* User+CoreDataProperties.swift in Sources */,
+				879C39C42485E89E00A4E86C /* Coupon+CoreDataClass.swift in Sources */,
 				879C39782484B73300A4E86C /* ViewController.swift in Sources */,
 				879C39762484B73300A4E86C /* AppDelegate.swift in Sources */,
+				879C39CD2486295A00A4E86C /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +333,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SQ7J7D64MC;
 				INFOPLIST_FILE = LiveFitFood/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,6 +352,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SQ7J7D64MC;
 				INFOPLIST_FILE = LiveFitFood/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
