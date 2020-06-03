@@ -9,7 +9,7 @@
 import UIKit
 import CoreData
 
-class WelcomeViewController: UIViewController {
+class WelcomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     // MARK: Variables
     let dbContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -50,6 +50,49 @@ class WelcomeViewController: UIViewController {
     
     func loadJSONDataToSQLite() {
         
+        guard let file = openDefaultFile() else {
+            return
+        }
+        
+        do {
+            let data = try String(contentsOfFile: file).data(using: .utf8)
+            let json = try JSON(data: data!)
+            // Organize into a mealkit json array
+            let jsonArray = json.array
+            print(jsonArray![0])
+            for mealkitJSON in jsonArray! {
+                
+                let mealkit = Mealkit(context: dbContext)
+                mealkit.name = mealkitJSON["kitName"].stringValue
+                mealkit.desc = mealkitJSON["kitDesc"].stringValue
+                mealkit.photo = mealkitJSON["photo"].stringValue
+                mealkit.price = mealkitJSON["price"].doubleValue
+                
+                let mealsJSONArray = mealkitJSON["meals"].array
+                for mealJSON in mealsJSONArray! {
+                    let meal = Meal(context: dbContext)
+                    meal.name = mealJSON["mealName"].stringValue
+                    meal.calories = mealJSON["calories"].doubleValue
+                    meal.photo = mealJSON["photo"].stringValue
+                    
+                    // add meal to meal entity if it is not a duplicate
+                    meals.append(meal)
+                    
+                    mealkit.addToMeals(meal)
+                }
+                // Add mealkit to mealkit entity
+                mealkits.append(mealkit)
+            }
+            
+            // Resolve duplicates by merging them into one
+            dbContext.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
+            
+            try dbContext.save()
+            
+        } catch {
+            print("Error during json migration to sqlite")
+            print(error.localizedDescription)
+        }
         
         
     }
@@ -75,5 +118,31 @@ class WelcomeViewController: UIViewController {
 
     @IBAction func btnLogoutPressed(_ sender: Any) {
         performSegue(withIdentifier: "loginSegue", sender: self)
+    }
+    
+    // MARK: Table view delegates
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return mealkits.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCell(withIdentifier: "mealkitCell") as? MealkitTableViewCell
+        
+        if cell == nil {
+            cell = MealkitTableViewCell(style: .default, reuseIdentifier: "mealkitCell")
+        }
+        
+        let index = indexPath.row
+        let photo = mealkits[index].photo ?? "noimage"
+        cell?.imgMealkitPicture.image = UIImage(named: photo)
+        cell?.lblMealkitName.text = "\(mealkits[index].name!) Package"
+        cell?.lblMealkitDescription.text = mealkits[index].desc
+        cell?.lblMealkitPrice.text = "CA$\(String(format: "%.2f",mealkits[index].price))"
+        
+        return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        return
     }
 }

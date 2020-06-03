@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		871F725A248765B400462D56 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871F7259248765B400462D56 /* SwiftyJSON.swift */; };
+		871F725C248777FF00462D56 /* MealkitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871F725B248777FF00462D56 /* MealkitTableViewCell.swift */; };
 		879A7AD52487511400C08555 /* mealkits.json in Resources */ = {isa = PBXBuildFile; fileRef = 879A7AD42487511400C08555 /* mealkits.json */; };
 		879C39762484B73300A4E86C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C39752484B73300A4E86C /* AppDelegate.swift */; };
 		879C39782484B73300A4E86C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C39772484B73300A4E86C /* ViewController.swift */; };
@@ -28,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		871F7259248765B400462D56 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		871F725B248777FF00462D56 /* MealkitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealkitTableViewCell.swift; sourceTree = "<group>"; };
 		879A7AD42487511400C08555 /* mealkits.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mealkits.json; sourceTree = "<group>"; };
 		879C39722484B73300A4E86C /* LiveFitFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveFitFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		879C39752484B73300A4E86C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +94,7 @@
 		879C39742484B73300A4E86C /* LiveFitFood */ = {
 			isa = PBXGroup;
 			children = (
+				871F7259248765B400462D56 /* SwiftyJSON.swift */,
 				879A7AD42487511400C08555 /* mealkits.json */,
 				879C39752484B73300A4E86C /* AppDelegate.swift */,
 				879C39772484B73300A4E86C /* ViewController.swift */,
@@ -99,6 +104,7 @@
 				879C39842484B73500A4E86C /* Info.plist */,
 				879C397C2484B73300A4E86C /* LiveFitFood.xcdatamodeld */,
 				879C39CC2486295A00A4E86C /* WelcomeViewController.swift */,
+				871F725B248777FF00462D56 /* MealkitTableViewCell.swift */,
 			);
 			path = LiveFitFood;
 			sourceTree = "<group>";
@@ -178,6 +184,7 @@
 				879C39C72485E89E00A4E86C /* Order+CoreDataProperties.swift in Sources */,
 				879C39C32485E89E00A4E86C /* Mealkit+CoreDataProperties.swift in Sources */,
 				879C397E2484B73300A4E86C /* LiveFitFood.xcdatamodeld in Sources */,
+				871F725A248765B400462D56 /* SwiftyJSON.swift in Sources */,
 				879C39C22485E89E00A4E86C /* Mealkit+CoreDataClass.swift in Sources */,
 				879C39C82485E89E00A4E86C /* User+CoreDataClass.swift in Sources */,
 				879C39C52485E89E00A4E86C /* Coupon+CoreDataProperties.swift in Sources */,
@@ -189,6 +196,7 @@
 				879C39782484B73300A4E86C /* ViewController.swift in Sources */,
 				879C39762484B73300A4E86C /* AppDelegate.swift in Sources */,
 				879C39CD2486295A00A4E86C /* WelcomeViewController.swift in Sources */,
+				871F725C248777FF00462D56 /* MealkitTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
