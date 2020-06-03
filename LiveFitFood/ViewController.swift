@@ -308,7 +308,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let view = segue.destination as! WelcomeViewController
+        let navC = segue.destination as! UINavigationController
+        let view = navC.children[0] as! WelcomeViewController
+        //let view = segue.destination as! WelcomeViewController
         view.loggedUser = users[0]
     }
     

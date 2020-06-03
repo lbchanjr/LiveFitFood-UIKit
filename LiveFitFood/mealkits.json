@@ -3,6 +3,7 @@
 	  "kitDesc": "High protein, low-calorie meals with a nutrient profile tuned for weight loss.",
 	  "photo": "packageweightloss",
 	  "price": 81,
+	  "sku": "WLP0001",
 	  "meals": [
 				{ "mealName": "Roasted Pork Tenderloin With Apple Reduction",
 				  "calories": 526,
@@ -38,6 +39,7 @@
 	  "kitDesc": "High fat, low carb meals with moderate protein to achieve and sustain ketosis.",
 	  "photo": "packageketo",
 	  "price": 94,
+	  "sku": "KTO0002",
 	  "meals": [
 				{ "mealName": "Beef Gratin",
 				  "calories": 691,
@@ -74,6 +76,7 @@
 	  "kitDesc": "Higher protein and calorie portions to support your muscle gain momentum.",
 	  "photo": "packagemusclegain",
 	  "price": 83.50,
+	  "sku": "MCG0003",
 	  "meals": [
 				{ "mealName": "Butter Chicken With Mixed Vegetables",
 				  "calories": 497,
@@ -109,6 +112,7 @@
 	  "kitDesc": "Low carb, nutrient-rich meals with fat-burning profiles to support fat loss.",
 	  "photo": "packagefatburner",
 	  "price": 86.50,
+	  "sku": "FTB0004",
 	  "meals": [
 				{ "mealName": "Beef Gratin",
 				  "calories": 691,

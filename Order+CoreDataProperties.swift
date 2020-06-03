@@ -2,7 +2,7 @@
 //  Order+CoreDataProperties.swift
 //  LiveFitFood
 //
-//  Created by Louise Chan on 2020-06-01.
+//  Created by Louise Chan on 2020-06-03.
 //  Copyright © 2020 Louise Chan. All rights reserved.
 //
 //
@@ -18,9 +18,11 @@ extension Order {
     }
 
     @NSManaged public var datetime: NSDate?
-    @NSManaged public var number: Int32
+    @NSManaged public var number: Int64
     @NSManaged public var tip: Double
+    @NSManaged public var total: Double
     @NSManaged public var buyer: User?
     @NSManaged public var item: Mealkit?
+    @NSManaged public var discount: Coupon?
 
 }

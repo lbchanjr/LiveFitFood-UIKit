@@ -17,6 +17,8 @@ class WelcomeViewController: UIViewController, UITableViewDelegate, UITableViewD
     var mealkits: [Mealkit] = []
     var meals: [Meal] = []
     
+    var mealkitDetailVC: MealsViewController?
+    
     @IBOutlet weak var lblUsername: UILabel!
     @IBOutlet weak var imgLoggedUser: UIImageView!
     override func viewDidLoad() {
@@ -33,6 +35,10 @@ class WelcomeViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        // Hide navigation bar
+        navigationController?.isNavigationBarHidden = true
+    }
     // MARK: Helper functions
     func fetchMealkitAndMeals() {
         let requestMK : NSFetchRequest<Mealkit> = Mealkit.fetchRequest()
@@ -49,6 +55,8 @@ class WelcomeViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func loadJSONDataToSQLite() {
+        
+        print("Migrating JSON data to sqlite.")
         
         guard let file = openDefaultFile() else {
             return
@@ -67,6 +75,7 @@ class WelcomeViewController: UIViewController, UITableViewDelegate, UITableViewD
                 mealkit.desc = mealkitJSON["kitDesc"].stringValue
                 mealkit.photo = mealkitJSON["photo"].stringValue
                 mealkit.price = mealkitJSON["price"].doubleValue
+                mealkit.sku = mealkitJSON["sku"].stringValue
                 
                 let mealsJSONArray = mealkitJSON["meals"].array
                 for mealJSON in mealsJSONArray! {
@@ -117,7 +126,7 @@ class WelcomeViewController: UIViewController, UITableViewDelegate, UITableViewD
     */
 
     @IBAction func btnLogoutPressed(_ sender: Any) {
-        performSegue(withIdentifier: "loginSegue", sender: self)
+        performSegue(withIdentifier: "loginSegue", sender: "logout")
     }
     
     // MARK: Table view delegates
@@ -143,6 +152,18 @@ class WelcomeViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        return
+        guard let destVC = mealkitDetailVC else {
+            return
+        }
+        
+        destVC.loggedUser = loggedUser
+        destVC.mealkit = mealkits[indexPath.row]
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if sender is MealkitTableViewCell {
+            let view = segue.destination as! MealsViewController
+            mealkitDetailVC = view
+        }
     }
 }
