@@ -255,6 +255,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UINavigationControl
             }
         } catch {
             print("Error reading from database")
+            print(error.localizedDescription)
         }
     }
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		879A7AD52487511400C08555 /* mealkits.json in Resources */ = {isa = PBXBuildFile; fileRef = 879A7AD42487511400C08555 /* mealkits.json */; };
 		879C39762484B73300A4E86C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C39752484B73300A4E86C /* AppDelegate.swift */; };
 		879C39782484B73300A4E86C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 879C39772484B73300A4E86C /* ViewController.swift */; };
 		879C397B2484B73300A4E86C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 879C39792484B73300A4E86C /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		879A7AD42487511400C08555 /* mealkits.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mealkits.json; sourceTree = "<group>"; };
 		879C39722484B73300A4E86C /* LiveFitFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveFitFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		879C39752484B73300A4E86C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		879C39772484B73300A4E86C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 		879C39742484B73300A4E86C /* LiveFitFood */ = {
 			isa = PBXGroup;
 			children = (
+				879A7AD42487511400C08555 /* mealkits.json */,
 				879C39752484B73300A4E86C /* AppDelegate.swift */,
 				879C39772484B73300A4E86C /* ViewController.swift */,
 				879C39792484B73300A4E86C /* Main.storyboard */,
@@ -161,6 +164,7 @@
 				879C39832484B73500A4E86C /* LaunchScreen.storyboard in Resources */,
 				879C39802484B73500A4E86C /* Assets.xcassets in Resources */,
 				879C397B2484B73300A4E86C /* Main.storyboard in Resources */,
+				879A7AD52487511400C08555 /* mealkits.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
