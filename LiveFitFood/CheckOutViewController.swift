@@ -68,7 +68,7 @@ class CheckOutViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         lblSubtotalPrice.text = "$\(String(format: "%.2f", mk.price))"
         lblDiscountPrice.text = "$\(String(format: "%.2f", discount))"
         
-        total = mk.price + tax + discount + tip
+        total = mk.price + tax - discount + tip
         lblTaxAmount.text = "$\(String(format: "%.2f", tax))"
         lblTotalPrice.text = "$\(String(format: "%.2f", total))"
         
@@ -100,7 +100,7 @@ class CheckOutViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         let request : NSFetchRequest<Coupon> = Coupon.fetchRequest()
         
         // Query for coupons that are unused
-        let query = NSPredicate(format: "isUsed == false")
+        let query = NSPredicate(format: "isUsed == false AND owner == %@", loggedUser!)
         request.predicate = query
 
         do {
@@ -117,7 +117,7 @@ class CheckOutViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         textField.resignFirstResponder()
         textFieldDidEndEditing(textField)
         
-        total = mealkit!.price + tax + discount + tip
+        total = mealkit!.price + tax - discount + tip
         lblTotalPrice.text = "$\(String(format: "%.2f", total))"
         return true
     }
@@ -192,7 +192,7 @@ class CheckOutViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         print("Apply coupon pressed")
         appliedCoupon = coupons[pckCoupon.selectedRow(inComponent: 0)]
         discount = (appliedCoupon!.discount/100) * mealkit!.price
-        total = mealkit!.price + tax + discount + tip
+        total = mealkit!.price + tax - discount + tip
         lblTotalPrice.text = "$\(String(format: "%.2f", total))"
         lblDiscountPrice.text = "$\(String(format: "%.2f", discount))"
         btnApplyCoupon.isEnabled = false
@@ -205,7 +205,7 @@ class CheckOutViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         txtTipPercentage.text = "\(Int(stpTipSelect.value))"
         tip = mealkit!.price * (stpTipSelect.value/100)
         txtTipAmount.text = "\(String(format:"%.2f", tip))"
-        total = mealkit!.price + tax + discount + tip
+        total = mealkit!.price + tax - discount + tip
         lblTotalPrice.text = "$\(String(format: "%.2f", total))"
     }
     
