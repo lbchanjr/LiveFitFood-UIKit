@@ -28,7 +28,7 @@ class OrderSummaryViewController: UIViewController, CLLocationManagerDelegate {
     // Note: Shop location coordinate is set to George Brown College since no work address is available for this business
     let SHOP_LOCATION_COORDINATES = CLLocationCoordinate2D(latitude: 43.6761366, longitude: -79.412679)
     // Note: Distance of user before order will be prepared is 100m
-    let SHOP_DISTANCE_BEFORE_PREPARATION: CLLocationDistance = 100 // Change back to 100
+    let SHOP_DISTANCE_BEFORE_PREPARATION: CLLocationDistance = 
     // Note: Once order is prepared, a 15 minute timer will commence
     let TIMER_MINUTE_TIMEOUT = 15        // change to 15 when not demo-ing the project
     let TIMER_SECOND_TIMEOUT = 0
