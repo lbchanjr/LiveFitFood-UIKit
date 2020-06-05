@@ -146,7 +146,7 @@ class CheckOutViewController: UIViewController, UITextFieldDelegate, UIPickerVie
             label = v as! UILabel
         }
         label.font = UIFont (name: "Helvetica Neue", size: 14)
-        label.text = "\(coupons[row].code)\t(\(Int(coupons[row].discount))%)"
+        label.text = "\(String(format: "%010u", coupons[row].code))\t(\(Int(coupons[row].discount))%)"
         label.textAlignment = .center
         return label
     }

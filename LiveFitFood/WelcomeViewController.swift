@@ -25,7 +25,7 @@ class WelcomeViewController: UIViewController, UITableViewDelegate, UITableViewD
         super.viewDidLoad()
 
         // data from database
-        imgLoggedUser.image = UIImage(data: loggedUser?.photo as! Data, scale: 1.0)
+        imgLoggedUser.image = UIImage(data: loggedUser!.photo! as Data, scale: 1.0)
         lblUsername.text = loggedUser?.email!
         
         // Check if we need to load data from the stock json file

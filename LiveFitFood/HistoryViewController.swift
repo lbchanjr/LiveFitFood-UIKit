@@ -56,7 +56,7 @@ class HistoryViewController: UIViewController, UITableViewDelegate, UITableViewD
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MMM-dd"
         
-        let formattedDate = dateFormatter.string(from: orders[index].datetime as! Date)
+        let formattedDate = dateFormatter.string(from: orders[index].datetime! as Date)
         cell?.lblOrderDate.text = "\(formattedDate)"
         
         cell?.lblOrderItem.text = "\(orders[index].item!.name!) Package"

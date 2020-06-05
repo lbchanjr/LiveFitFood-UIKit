@@ -25,7 +25,7 @@ class OrderSummaryViewController: UIViewController, CLLocationManagerDelegate {
     // Location manager
     let locationManager = CLLocationManager()
     
-    // Note: Shop location coordinate is set to George Brown College
+    // Note: Shop location coordinate is set to George Brown College since no work address is available for this business
     let SHOP_LOCATION_COORDINATES = CLLocationCoordinate2D(latitude: 43.6761366, longitude: -79.412679)
     // Note: Distance of user before order will be prepared is 100m
     let SHOP_DISTANCE_BEFORE_PREPARATION: CLLocationDistance = 100 // Change back to 100
@@ -53,7 +53,7 @@ class OrderSummaryViewController: UIViewController, CLLocationManagerDelegate {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MMM-dd, hh:mm:ss a"
         
-        let formattedDate = dateFormatter.string(from: order!.datetime as! Date)
+        let formattedDate = dateFormatter.string(from: order!.datetime! as Date)
         lblOrderDate.text = "\(formattedDate)"
         
         lblOrderItem.text = "\(order!.item!.name!) Package"
@@ -103,8 +103,8 @@ class OrderSummaryViewController: UIViewController, CLLocationManagerDelegate {
     func fetchCoupons(on date: String) {
         let request : NSFetchRequest<Coupon> = Coupon.fetchRequest()
         
-        // Query for coupons that were generated on specified date
-        let query = NSPredicate(format: "dateGenerated == %@", date)
+        // Query for coupons that were generated on specified date for the logged user
+        let query = NSPredicate(format: "dateGenerated == %@ AND owner == %@", date, loggedUser!)
         request.predicate = query
         
         do {
