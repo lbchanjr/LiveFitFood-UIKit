@@ -23,7 +23,7 @@ class OrderSummaryViewController: UIViewController, CLLocationManagerDelegate {
     var timerSecond = 0
     
     // Location manager
-    let locationManager = CLLocationManager()
+    let locationManager: CLLocationManager! = CLLocationManager()
     
     // Note: Shop location coordinate is set to George Brown College since no work address is available for this business
     let SHOP_LOCATION_COORDINATES = CLLocationCoordinate2D(latitude: 43.6761366, longitude: -79.412679)
@@ -144,7 +144,9 @@ class OrderSummaryViewController: UIViewController, CLLocationManagerDelegate {
     @IBAction func btnHomeNavPressed(_ sender: Any) {
         navigationController?.popToRootViewController(animated: true)
         
-        locationManager.stopUpdatingLocation()
+        if locationManager != nil {
+            locationManager.stopUpdatingLocation()
+        }
     }
     
     override var canBecomeFirstResponder: Bool {
@@ -277,6 +279,10 @@ class OrderSummaryViewController: UIViewController, CLLocationManagerDelegate {
                             
                             self.showCouponAlert(title: "Order update", msg: "Your order is now ready for pick up.")
                             self.lblOrderStatus.text = "Your order is now ready for pickup."
+                            
+                            if self.locationManager != nil {
+                                self.locationManager.stopUpdatingLocation()
+                            }
                         
                         } else {
                             self.timerMinute -= 1
