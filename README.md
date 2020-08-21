@@ -5,7 +5,7 @@
 
 #### Screenshots  
 
-<img src="./screenshots/screenshot1.png" alt="Title screen" width="200">     <img src="./screenshots/screenshot2.png" alt="Title screen" width="200">     <img src="./screenshots/screenshot3.png" alt="Title screen" width="200">     <img src="./screenshots/screenshot4.png" alt="Title screen" width="200">     <img src="./screenshots/screenshot6.png" alt="Title screen" width="200">     <img src="./screenshots/screenshot7.png" alt="Title screen" width="200">     <img src="./screenshots/screenshot11.png" alt="Title screen" width="200">
+<img src="./screenshots/screenshot1.png" alt="screen shot 1" border="1" width="200">     <img src="./screenshots/screenshot2.png" border="1" alt="screen shot 2" width="200">     <img src="./screenshots/screenshot3.png" border="1" alt="screen shot 3" width="200">     <img src="./screenshots/screenshot4.png" border="1" alt="screen shot 4" width="200">     <img src="./screenshots/screenshot6.png" border="1" alt="screen shot 6" width="200">     <img src="./screenshots/screenshot7.png" border="1" alt="screen shot 7" width="200">     <img src="./screenshots/screenshot11.png" border="1" alt="screen shot 11" width="200">
 
 #### Technologies/Concepts used
 
@@ -27,11 +27,25 @@
 
 * UIAlertController for popup alerts
 
+* Shake gesture detection
+
 #### Features
 
 * Unified sign-in and sign-up features.
 
-* Email used during sign-up is checked for validity
+* Email validity check during sign-up.
+
+* Mealkit list display with name, description and price
+
+* Detailed view of mealkit when clicked showing meals that are available for the package.
+
+* Tip selection option during checkout.
+
+* Order history display.
+
+* Optional coupon application for additional discount to meals that were purchased.
+
+* Daily mini-game that allows the customer to win a coupon.
 
 
-#### Link to specification: <a href="./docs/MAD4006 - Project - Meal Delivery Apps, Revised.pdf" target="_blank">[App Specification]</a>
+#### Link to specification: <a href="./docs/MAD4005 - Project - Meal Delivery Apps.pdf" target="_blank">[App Specification]</a>
