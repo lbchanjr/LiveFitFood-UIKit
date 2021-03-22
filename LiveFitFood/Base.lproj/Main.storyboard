@@ -548,7 +548,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVz-uO-hSd">
-                                <rect key="frame" x="158.5" y="635" width="97" height="30"/>
+                                <rect key="frame" x="124" y="635" width="166" height="30"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Apply Coupon">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -686,6 +686,7 @@
                             <constraint firstItem="fxU-5q-wfC" firstAttribute="top" secondItem="Nd7-X9-xwQ" secondAttribute="bottom" constant="30" id="WKx-7O-D1O"/>
                             <constraint firstItem="Be9-sc-Gz1" firstAttribute="centerY" secondItem="zv7-LI-ysf" secondAttribute="centerY" id="Y2i-2G-FHh"/>
                             <constraint firstItem="Be9-sc-Gz1" firstAttribute="trailing" secondItem="Dhv-FN-cXA" secondAttribute="trailing" id="aom-TX-KbG"/>
+                            <constraint firstItem="TVz-uO-hSd" firstAttribute="width" secondItem="7Rn-3H-Cb0" secondAttribute="width" multiplier="0.4" id="cFM-ZO-6bp"/>
                             <constraint firstItem="1a3-SE-Csk" firstAttribute="trailing" secondItem="Be9-sc-Gz1" secondAttribute="trailing" id="ecL-EL-tDB"/>
                             <constraint firstItem="qew-Kj-tHK" firstAttribute="leading" secondItem="M8T-5m-Nav" secondAttribute="leading" id="elC-ZG-hqD"/>
                             <constraint firstItem="guZ-Xh-YAd" firstAttribute="trailing" secondItem="5Og-QQ-k8R" secondAttribute="trailing" id="eyV-P7-XT9"/>
