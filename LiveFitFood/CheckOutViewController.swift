@@ -66,7 +66,7 @@ class CheckOutViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         lblMealkitPrice.text = "$\(String(format: "%.2f", mk.price))"
         lblSKUCode.text = "SKU Code: \(mk.sku!)"
         lblSubtotalPrice.text = "$\(String(format: "%.2f", mk.price))"
-        lblDiscountPrice.text = "-$\(String(format: "%.2f", discount))"
+        lblDiscountPrice.text = "\(discount == 0 ? "":"-")$\(String(format: "%.2f", discount))"
         
         total = mk.price + tax - discount + tip
         lblTaxAmount.text = "$\(String(format: "%.2f", tax))"
@@ -194,7 +194,8 @@ class CheckOutViewController: UIViewController, UITextFieldDelegate, UIPickerVie
         discount = (appliedCoupon!.discount/100) * mealkit!.price
         total = mealkit!.price + tax - discount + tip
         lblTotalPrice.text = "$\(String(format: "%.2f", total))"
-        lblDiscountPrice.text = "-$\(String(format: "%.2f", discount))"
+        print("discount = \(discount)")
+        lblDiscountPrice.text = "\(discount == 0 ? "":"-")$\(String(format: "%.2f", discount))"
         btnApplyCoupon.isEnabled = false
         btnApplyCoupon.isHidden = true
         lblCouponHeader.text = "Discount was applied to order."
