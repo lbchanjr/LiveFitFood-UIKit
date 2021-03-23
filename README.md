@@ -15,6 +15,8 @@
 
 * Navigation Controller and Segues
 
+* Core Location 
+
 * Table View Controllers and custom table view cells
 
 * Core Data entity relationships
@@ -46,6 +48,8 @@
 * Order history display.
 
 * Optional coupon application for additional discount to meals that were purchased.
+
+* User location tracking to determine whether user is within business location vicinity.
 
 * Daily mini-game that allows the customer to win a coupon.
 
