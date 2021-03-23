@@ -11,6 +11,8 @@
 
 * Persistent data storage using the Apple's Core Data framework 
 
+* Auto-Layout
+
 * Navigation Controller and Segues
 
 * Table View Controllers and custom table view cells
