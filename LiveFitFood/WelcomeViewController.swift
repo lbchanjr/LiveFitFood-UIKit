@@ -144,7 +144,7 @@ class WelcomeViewController: UIViewController, UITableViewDelegate, UITableViewD
         let index = indexPath.row
         let photo = mealkits[index].photo ?? "noimage"
         cell?.imgMealkitPicture.image = UIImage(named: photo)
-        cell?.lblMealkitName.text = "\(mealkits[index].name!) Package"
+        cell?.lblMealkitName.text = "\(mealkits[index].name ?? "") Package"
         cell?.lblMealkitDescription.text = mealkits[index].desc
         cell?.lblMealkitPrice.text = "CA$\(String(format: "%.2f",mealkits[index].price))"
         
