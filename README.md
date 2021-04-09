@@ -1,7 +1,7 @@
 # Live Fit Food Ordering App for iOS (UIKit framework / Storyboard layout version)
 
 ### Mock ordering app for the livefitfood.ca website.
-### App UI is implemented using the UIKit framework for the SwiftUI/Combine framework implementation of this app, go to this link: [Live Fit Food (SwiftUI/Combine)](https://github.com/lbchanjr/LiveFitFood-SwiftUI).
+#### App UI is implemented using the UIKit framework for the SwiftUI/Combine framework implementation of this app, go to this link: [Live Fit Food (SwiftUI/Combine version)](https://github.com/lbchanjr/LiveFitFood-SwiftUI).
 #### ***DISCLAIMER: This app was developed as an exercise in native iOS mobile application development and is not in any way affiliated with the livefitfood.ca website or any of its mobile apps.*** 
 
 #### Screenshots  
